@@ -22,7 +22,6 @@ cart.forEach(element =>{
     }
 });
 
-
 // function checkorder
 let checkOrder = (itemName, quantity) => {
     let itemFound = cartItemList.find(item => item === itemName)
