@@ -1,0 +1,25 @@
+{
+  "name": "javascript_beginner_phase",
+  "version": "1.0.0",
+  "description": "Codes written during learning phase on Tech crush bootcamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iyaseledaniel/Javascript_beginner_phase.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/iyaseledaniel/Javascript_beginner_phase/issues"
+  },
+  "homepage": "https://github.com/iyaseledaniel/Javascript_beginner_phase#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}
