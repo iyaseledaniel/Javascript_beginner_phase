@@ -10,21 +10,22 @@ const getRandomQuotes = (req, res) => {
     while (quoteLength > 0){
         let randomIndex = Math.floor(Math.random() * quoteLength)
         let randomQuote = quotes[randomIndex]
-        res.status(200).send(`<h1>Category: ${randomQuote.category}</h1>
-            <h2><i>Quote: ${randomQuote.quote}</i></h2>`)
         quoteLength--;
+        return res.status(200).send(`<h1>Category: ${randomQuote.category}</h1>
+            <h2><i>Quote: ${randomQuote.quote}</i></h2>`)
     }
         
 }
 
-const getCategoryQuotes = (res, req) => {
+const getCategoryQuotes = (req, res) => {
     const category = req.params.category;
-    let findQuotes = quotes.filter(cat => cat.category === category)
+    let findQuotes = quotes.filter(cat => cat["category"] === category)
+    //console.log(findQuotes)
 
-    if(!findQuotes){
-        res.status(404).send(`<b>Category for ${category} quotes not found.</b>`)
+    if(findQuotes.length === 0){
+        return res.status(404).send(`<h1>Category for ${category} quotes not found.</h1>`)
     }else{
-        res.status(200).json(findQuotes)
+        return res.status(200).json(findQuotes)
     }
 }
 
