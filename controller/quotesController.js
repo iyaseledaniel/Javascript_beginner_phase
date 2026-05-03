@@ -2,7 +2,12 @@
 const quotes = require('../model/quotesModel')
 
 const getAllQuotes = (req, res) => {
-    return res.status(200).json(quotes)
+    const html = quotes.map(item => {
+        return `<h3><i>Category: ${item.category}</i></h3>
+        <h2><b>Quote: ${item.quote}</b></h2>
+        `
+    }).join("");
+    return res.status(200).send(html)
 }
 
 const getRandomQuotes = (req, res) => {
