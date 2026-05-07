@@ -4,7 +4,7 @@ const quotes = require('../model/quotesModel')
 const getAllQuotes = (req, res) => {
     const html = quotes.map(item => {
         return `<h3><i>Category: ${item.category}</i></h3>
-        <h2><b>Quote: ${item.quote}</b></h2>
+                <h2><b>Quote: ${item.quote}</b></h2><hr>
         `
     }).join("");
     return res.status(200).send(html)
@@ -30,7 +30,12 @@ const getCategoryQuotes = (req, res) => {
     if(findQuotes.length === 0){
         return res.status(404).send(`<h1>Category for ${category} quotes not found.</h1>`)
     }else{
-        return res.status(200).json(findQuotes)
+        const html = findQuotes.map(item =>{
+            return `<h3><i>Category: ${item.category}</i></h3>
+                    <h2>Quotes: ${item.quote}</h2><hr>
+            `
+        }).join("");
+        return res.status(200).send(html)
     }
 }
 
