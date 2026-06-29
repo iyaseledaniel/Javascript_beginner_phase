@@ -33,7 +33,6 @@ A lightweight RESTful API built with **Node.js** and **Express.js** for retrievi
 ├── errors/
 ├── middlewares/
 ├── routes/
-├── app.js
 └── server.js
 ```
 
