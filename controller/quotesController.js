@@ -1,5 +1,4 @@
 // control quotes display
-const { NotFoundError } = require('../errors');
 const asyncWrapper = require('../middlewares/sync')
 let quotes = require('../model/quotesModel');
 const { getAllQuotesService, getRandomQuotesService, getCategoryQuotesService } = require('../services');

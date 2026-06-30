@@ -43,7 +43,7 @@ A lightweight RESTful API built with **Node.js** and **Express.js** for retrievi
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/quotes-api.git
+git clone https://github.com/iyaseledaniel/Javascript_beginner_phase.git
 ```
 
 Navigate into the project directory:
