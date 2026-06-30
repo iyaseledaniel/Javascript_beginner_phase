@@ -49,7 +49,7 @@ git clone https://github.com/iyaseledaniel/Javascript_beginner_phase.git
 Navigate into the project directory:
 
 ```bash
-cd quotes-api
+cd dir-name
 ```
 
 Install dependencies:
